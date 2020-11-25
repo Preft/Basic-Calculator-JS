@@ -1,0 +1,125 @@
+.leftButton{
+	position: absolute;
+	
+	left: 100px;
+}
+.midButton{
+	position: absolute;
+	
+	left: 200px;
+
+}
+.rightButton{
+	position: absolute;
+	
+	left: 300px;
+}
+.farButton {
+	position: absolute;
+	
+	left: 400px;
+}
+.centerButton {
+	position: absolute;
+	
+	top: 400px;
+}
+/* Buttons */
+#one{
+	top: 50px;
+	
+}
+#two{
+	top: 50px;
+}
+#three{
+	top: 50px;
+}
+
+#four{
+	top: 85px;
+}
+#five{
+	top: 85px;
+}
+#six{
+	top: 85px;
+}
+#seven{
+	top: 120px;
+}
+#eight{
+	top: 120px;
+}
+#nine{
+	top: 120px;
+}
+#decimal {
+	top: 155px;
+}
+#zero {
+	top: 155px;
+}
+/* Operations */
+#equals {
+	top: 155px;
+}
+#add {
+	top: 50px;
+}
+#subtract {
+	top: 85px;
+}
+#multiply {
+	top: 120px;
+}
+#divide {
+	top: 155px;
+}
+#clear {
+	top: 190px;
+	left: 300px;
+	width: 200px;
+}
+#negate {
+	top: 190px;
+	left: 100px;
+	width: 200px;
+}
+button {
+	height: 35px;
+	width: 100px;
+}
+
+/* Displays/ inputs */
+/* Im bad at css and everything else actually */
+
+#display {
+	top: 10px;
+	left: 102px;
+	position: absolute;
+}
+#input1 {
+	top: 30px;
+	left: 100px;
+	width: 400px;
+	position: absolute;
+	
+}
+#display1 {
+	top: 225px;
+	left: 102px;
+	position: absolute;
+	
+}
+#hi{
+	top: 260px;
+	left: 102px;
+	position: absolute;
+	
+}
+
+
+
+
+
