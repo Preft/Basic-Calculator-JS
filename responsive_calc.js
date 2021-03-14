@@ -3,13 +3,13 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 
-var arrayMan = [];
-var arrayWomen = [];
+var array1 = [];
+var array2= [];
 
 //$(document).ready(function(){
     //First and Last
     //alert("I am an alert box!");
-    //document.getElementById("display2").innerHTML = arrayWomen;
+    //document.getElementById("display2").innerHTML = array2;
 //}); 
 
 //////////////////////////////////////////////////////////////////////////////////////
@@ -116,8 +116,8 @@ function clear1(){
     number1 = 0;
     number2 = 0;
     arrayOld = [];
-    arrayMan = [];
-    arrayWomen = [];
+    array1 = [];
+    array2 = [];
     finalAnswer = 0;
 
 }
@@ -130,8 +130,8 @@ function clear2(){
     number1 = 0;
     number2 = 0;
     //arrayOld = [];
-    arrayMan = [];
-    arrayWomen = [];
+    array1 = [];
+    array2 = [];
     //finalAnswer = 0;
     
 
@@ -156,10 +156,10 @@ function calc1(num4){
         var num1 = document.getElementById("input1").value;
         document.getElementById("display").innerHTML = "";
         document.getElementById("input1").value = "";
-        arrayMan.push(num1); // odd is numbers
-        arrayMan.push(operation); // even is operations
-        ihate();
-        document.getElementById("display").innerHTML = ihate();
+        array1.push(num1); // odd is numbers
+        array1.push(operation); // even is operations
+        onclick();
+        document.getElementById("display").innerHTML = onclick();
         //$('#item1 span').text(); 
 
         break;
@@ -168,10 +168,10 @@ function calc1(num4){
         var num1 = document.getElementById("input1").value;
         document.getElementById("display").innerHTML = "";
         document.getElementById("input1").value = "";
-        arrayMan.push(num1); 
-        arrayMan.push(operation); 
-        ihate();
-        document.getElementById("display").innerHTML = ihate();
+        array1.push(num1); 
+        array1.push(operation); 
+        onclick();
+        document.getElementById("display").innerHTML = onclick();
         
         
         break;
@@ -180,10 +180,10 @@ function calc1(num4){
         var num1 = document.getElementById("input1").value;
         document.getElementById("display").innerHTML = "";
         document.getElementById("input1").value = "";
-        arrayMan.push(num1); 
-        arrayMan.push(operation); 
-        ihate();
-        document.getElementById("display").innerHTML = ihate();
+        array1.push(num1); 
+        array1.push(operation); 
+        onclick();
+        document.getElementById("display").innerHTML = onclick();
         
         
         break;
@@ -192,10 +192,10 @@ function calc1(num4){
         var num1 = document.getElementById("input1").value;
         document.getElementById("display").innerHTML = "";
         document.getElementById("input1").value = "";
-        arrayMan.push(num1); 
-        arrayMan.push(operation); 
-        ihate();
-        document.getElementById("display").innerHTML = ihate();
+        array1.push(num1); 
+        array1.push(operation); 
+        onclick();
+        document.getElementById("display").innerHTML = onclick();
         
 
         
@@ -217,37 +217,37 @@ function calc1(num4){
 function calc2(){
     
     var num2 = document.getElementById("input1").value;
-    arrayMan.push(num2);
+    array1.push(num2);
     document.getElementById("display").innerHTML = "" ;
     document.getElementById("input1").value = "";
-    var finalAnswer = arrayMan[0];
+    var finalAnswer = array1[0];
 
     
     //document.getElementById("display").innerHTML = finalAnswer;
     
-    for( i=0; i < arrayMan.length; i++){
+    for( i=0; i < array1.length; i++){
         if(i % 2 != 0){
             // code for inputs //
-            var num3 = parseFloat(arrayMan[i]);
+            var num3 = parseFloat(array1[i]);
             
 
 
             switch(num3){
                 case 0:
-                    var finalAnswer = parseFloat(finalAnswer) + parseFloat(arrayMan[i+1]);
+                    var finalAnswer = parseFloat(finalAnswer) + parseFloat(array1[i+1]);
                     document.getElementById("display").innerHTML = finalAnswer;
                     //document.getElementById("input1").value = finalAnswer;
                 break;
                 case 1:
-                    var finalAnswer = parseFloat(finalAnswer) - parseFloat(arrayMan[i+1]);
+                    var finalAnswer = parseFloat(finalAnswer) - parseFloat(array1[i+1]);
                     document.getElementById("display").innerHTML = finalAnswer;
                 break;
                 case 2:
-                    var finalAnswer = parseFloat(finalAnswer) * parseFloat(arrayMan[i+1]);
+                    var finalAnswer = parseFloat(finalAnswer) * parseFloat(array1[i+1]);
                     document.getElementById("display").innerHTML = finalAnswer;
                 break;
                 case 3:
-                    var finalAnswer = parseFloat(finalAnswer) / parseFloat(arrayMan[i+1]);
+                    var finalAnswer = parseFloat(finalAnswer) / parseFloat(array1[i+1]);
                     document.getElementById("display").innerHTML = finalAnswer;
                 break;
                 default:
@@ -275,10 +275,10 @@ function calc2(){
         document.getElementById("display1").innerHTML = "";
 
     ///display array
-        for(var j = 0; j<arrayMan.length; j++){
+        for(var j = 0; j<array1.length; j++){
             if(j % 2 != 0){
 
-                var num3 = parseFloat(arrayMan[j]);
+                var num3 = parseFloat(array1[j]);
                     switch(num3){
                 case 0:
                     //document.getElementById("display1").innerHTML += "+" + " ";
@@ -300,22 +300,22 @@ function calc2(){
             }
 
         } else {
-        document.getElementById("display1").innerHTML += arrayMan[j] + " ";
+        document.getElementById("display1").innerHTML += array1[j] + " ";
         }
     }
 
     document.getElementById("display1").innerHTML += " = " + finalAnswer;
 
     // send it to another array in another function for the onclick
-   arrayOld = arrayMan;
-   ihate();
+   arrayOld = array1;
+   onclick();
    document.getElementById("input1").value = finalAnswer;
    //document.getElementById("display2").innerHTML = arrayOld;
    // clear the bastard
-   arrayMan = [finalAnswer]
+   array1 = [finalAnswer]
    clear2();
    
-   //document.getElementById("display2").innerHTML = arrayMan;
+   //document.getElementById("display2").innerHTML = array1;
 
    
 }
@@ -324,27 +324,27 @@ function calc2(){
 ////////////////////////////////////// On click //////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
 
-function ihate(){
+function onclick(){
     stringeroo = "";
-    arrayWomen = [];
-for(var j = 0; j<arrayMan.length; j++){
+    array2 = [];
+for(var j = 0; j<array1.length; j++){
     
             if(j % 2 != 0){
 
-                var num3 = parseFloat(arrayMan[j]);
+                var num3 = parseFloat(array1[j]);
                     switch(num3){
                 case 0:
                     //document.getElementById("display1").innerHTML += "+" + " ";
-                    arrayWomen.push("+");
+                    array2.push("+");
                 break;
                 case 1:
-                    arrayWomen.push("-");
+                    array2.push("-");
                 break;
                 case 2:
-                    arrayWomen.push("*");
+                    array2.push("*");
                 break;
                 case 3:
-                    arrayWomen.push("/");
+                    array2.push("/");
                 break;
                 default:
                 //document.getElementById("display2").innerHTML += "fuck up";
@@ -353,7 +353,7 @@ for(var j = 0; j<arrayMan.length; j++){
             }
 
         } else {
-             arrayWomen.push(arrayMan[j]);
+            array2.push(array1[j]);
         }
 
     
@@ -361,9 +361,9 @@ for(var j = 0; j<arrayMan.length; j++){
     
 }
  
-for(var m=0; m<arrayWomen.length; m++){
+for(var m=0; m<array2.length; m++){
         //var stringeroo = "";
-        stringeroo += arrayWomen[m];
+        stringeroo += array2[m];
     }
 //document.getElementById("display2").innerHTML = stringeroo;
 return stringeroo;
