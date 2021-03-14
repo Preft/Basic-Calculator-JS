@@ -91,12 +91,22 @@ button {
 	width: 100px;
 }
 
+body {
+	background-color: black;
+	color: white;
+}
+
+.calculator {
+	color: black;
+}
+
 /* Displays/ inputs */
 /* Im bad at css and everything else actually */
 
 #display {
 	top: 10px;
 	left: 102px;
+	color: white;
 	position: absolute;
 }
 #input1 {
